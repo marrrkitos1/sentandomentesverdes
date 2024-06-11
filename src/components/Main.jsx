@@ -28,7 +28,7 @@ function Parrafo({ id, text }) {
 function SlideImg({ id }) {
     return (
         <div className="slide rounded-xl">
-            <img src={`/jpg/${id}.jpg`} alt={`Imagen ${id}`} className="rounded-xl" />
+            <img src={`/img/${id}.webp`} alt={`Imagen ${id}`} className="rounded-xl" />
         </div>
     );
 }
@@ -36,7 +36,7 @@ function SlideImg({ id }) {
 function SlideVideo({ id }) {
     return (
         <div className="slide rounded-xl">
-            <video src={`/media/videos/${id}.mp4`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
+            <video src={`/video/${id}.webm`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
         </div>
     )
 }
@@ -69,7 +69,7 @@ function Main({ imgLogoRef }) {
                         <span className="prev items-center self-center text-6xl pr-2">&lt;</span>
                         <div id="slider" className="flex justify-center w-54">
                             <div className="slide active rounded-xl">
-                                <img src="/jpg/1.jpg" alt="Imagen 1" className="rounded-xl" />
+                                <img src="/img/1.webp" alt="Imagen 1" className="rounded-xl" />
                             </div>
                             <SlideImg id={2} />
                             <SlideImg id={3} />
