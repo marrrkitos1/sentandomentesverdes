@@ -9,6 +9,7 @@ function App() {
     linksRef,
     iconRef,
     imgLogoRef,
+    videoPlayRefs,
   } = useAllFunciones();
 
   return (
@@ -17,7 +18,10 @@ function App() {
         linksRef={linksRef}
         iconRef={iconRef}
       />
-      <Main imgLogoRef={imgLogoRef} />
+      <Main
+        imgLogoRef={imgLogoRef}
+        videoPlayRefs={videoPlayRefs}
+      />
       <Footer />
     </>
   );

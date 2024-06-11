@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 
 function Titulos({ id, text }) {
     return (
@@ -33,15 +33,23 @@ function SlideImg({ id }) {
     );
 }
 
-function SlideVideo({ id }) {
+function SlideVideo({ id, videoPlayRefs }) {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoPlayRefs.current.push(videoRef.current);
+        }
+    }, [videoPlayRefs]);
+
     return (
         <div className="slide rounded-xl">
-            <video src={`/video/${id}.webm`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
+            <video ref={videoRef} src={`/video/${id}.webm`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
         </div>
-    )
+    );
 }
 
-function Main({ imgLogoRef }) {
+function Main({ imgLogoRef, videoPlayRefs }) {
     return (
         <div>
             <main id="main">
@@ -74,12 +82,12 @@ function Main({ imgLogoRef }) {
                             <SlideImg id={2} />
                             <SlideImg id={3} />
                             <SlideImg id={4} />
-                            <SlideVideo id={1} />
+                            <SlideVideo id={1} videoPlayRefs={videoPlayRefs} />
                             <SlideImg id={5} />
                             <SlideImg id={6} />
                             <SlideImg id={7} />
                             <SlideImg id={8} />
-                            <SlideVideo id={2} />
+                            <SlideVideo id={2} videoPlayRefs={videoPlayRefs} />
                             <SlideImg id={9} />
                             <SlideImg id={10} />
                             <SlideImg id={11} />
