@@ -11,7 +11,7 @@ function Titulos({ id, text }) {
 function Imagen({ id, imgLogoRef }) {
     return (
         <div id={`${id}`} className="flex justify-center">
-            <img src="/src/img/logoProyecto.png" alt="Logo" title="Logo" id="imgLogo"
+            <img src="/logoProyecto.png" alt="Logo" title="Logo" id="imgLogo"
                 className="max-w-90 h-auto lg:max-w-sm z-0" ref={imgLogoRef} />
         </div>
     );
@@ -28,7 +28,7 @@ function Parrafo({ id, text }) {
 function SlideImg({ id }) {
     return (
         <div className="slide rounded-xl">
-            <img src={`/src/img/media/jpg/${id}.jpg`} alt={`Imagen ${id}`} className="rounded-xl" />
+            <img src={`/jpg/${id}.jpg`} alt={`Imagen ${id}`} className="rounded-xl" />
         </div>
     );
 }
@@ -36,7 +36,7 @@ function SlideImg({ id }) {
 function SlideVideo({ id }) {
     return (
         <div className="slide rounded-xl">
-            <video src={`/src/img/media/videos/${id}.mp4`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
+            <video src={`/media/videos/${id}.mp4`} alt={`Video ${id}`} className="rounded-xl videoPlay" controls></video>
         </div>
     )
 }
@@ -69,17 +69,17 @@ function Main({ imgLogoRef }) {
                         <span className="prev items-center self-center text-6xl pr-2">&lt;</span>
                         <div id="slider" className="flex justify-center w-54">
                             <div className="slide active rounded-xl">
-                                <img src="/src/img/media/jpg/1.jpg" alt="Imagen 1" className="rounded-xl" />
+                                <img src="/jpg/1.jpg" alt="Imagen 1" className="rounded-xl" />
                             </div>
                             <SlideImg id={2} />
                             <SlideImg id={3} />
                             <SlideImg id={4} />
-                            <SlideVideo id={1}/>
+                            <SlideVideo id={1} />
                             <SlideImg id={5} />
                             <SlideImg id={6} />
                             <SlideImg id={7} />
                             <SlideImg id={8} />
-                            <SlideVideo id={2}/>
+                            <SlideVideo id={2} />
                             <SlideImg id={9} />
                             <SlideImg id={10} />
                             <SlideImg id={11} />

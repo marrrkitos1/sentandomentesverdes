@@ -18,7 +18,7 @@ function Header({ linksRef, iconRef }) {
                     </a>
                     <div id="iconContainer" className="flex lg:hidden">
                         <a className="flex content-center" id="icon" ref={iconRef}>
-                            <img src="/src/img/menu.png" alt="Menu" className="size-10" />
+                            <img src="/menu.png" alt="Menu" className="size-10" />
                         </a>
                     </div>
                 </div>
